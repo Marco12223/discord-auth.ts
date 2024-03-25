@@ -51,4 +51,20 @@ export class AccessHandler {
         return await response.json();
     }
 
+    public async revokeToken(token: string): Promise<{message: string, code: number}> {
+        let response = await fetch(Endpoints.REVOKE_ENDPOINT, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body: new URLSearchParams({
+                client_id: this.clientId,
+                client_secret: this.clientSecret,
+                token_type_hint: "access_token",
+                token: token,
+            })
+        })
+        return await response.json();
+    }
+
 }

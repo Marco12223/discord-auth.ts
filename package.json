@@ -1,0 +1,12 @@
+{
+  "name": "discord-auth.ts",
+  "version": "1.0.0",
+  "description": "This package provides a comprehensive and easy-to-use solution for implementing Discord OAuth2 authentication in your TypeScript applications. Designed with simplicity and flexibility in mind, it allows developers to quickly integrate Discord's OAuth2 authentication flow into their projects, enabling secure and seamless user authentication.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

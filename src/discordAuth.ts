@@ -1,6 +1,6 @@
 import {Scopes} from "./enums/scopes";
 
-class DiscordAuth {
+export class DiscordAuth {
     public clientId: string = "";
     public clientSecret: string = "";
     public redirectUri: string = "";
@@ -16,7 +16,7 @@ class DiscordAuth {
     }
 
     public getAuthUrl(): string {
-        return `https://discord.com/api/oauth2/authorize?client_id=${this.clientId}&redirect_uri=${this.redirectUri}&response_type=code&scope=${this.scopes.join(" ")}`;
+        return `https://discord.com/api/oauth2/authorize?client_id=${this.clientId}&redirect_uri=${this.redirectUri}&response_type=code&scope=${this.scopes.join("+")}`;
     }
 
 }

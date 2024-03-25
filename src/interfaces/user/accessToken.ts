@@ -1,5 +1,3 @@
-import {Scopes} from "../../enums/scopes";
-
 export interface AccessToken {
     access_token: string;
     token_type: string;

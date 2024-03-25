@@ -1,5 +1,6 @@
 import {Scopes} from "./enums/scopes";
 import {Properties} from "./interfaces/properties";
+import {Endpoints} from "./enums/endpoints";
 
 export class DiscordAuth {
     public clientId: string = "";
@@ -7,7 +8,7 @@ export class DiscordAuth {
     public redirectUri: string = "";
     public scopes: Scopes[] = [];
     public properties: Properties = {
-        API_ENDPOINT: "https://discord.com/api/v10"
+        API_ENDPOINT: Endpoints.API_ENDPOINT
     };
 
     constructor(private _clientId: string, private _clientSecret: string, private _redirectUri: string, private _scopes: Scopes[], private _properties?: Properties) {

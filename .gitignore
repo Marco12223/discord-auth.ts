@@ -1,0 +1,6 @@
+.idea/
+playground.js
+dist/
+package-lock.json
+.npmignore
+node_modules/

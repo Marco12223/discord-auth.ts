@@ -24,7 +24,7 @@ export class DiscordAuth {
     }
 
     public getAuthUrl(): string {
-        return `https://discord.com/api/oauth2/authorize?client_id=${this.clientId}&redirect_uri=${this.redirectUri}&response_type=code&scope=${this.scopes.join("+")}`;
+        return `${Endpoints.AUTHORIZE_ENDPOINT}?client_id=${this.clientId}&redirect_uri=${this.redirectUri}&response_type=code&scope=${this.scopes.join("+")}`;
     }
 
 }

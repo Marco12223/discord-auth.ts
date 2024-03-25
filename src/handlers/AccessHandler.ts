@@ -17,8 +17,6 @@ export class AccessHandler {
     }
 
     public async tokenExchange(code: string): Promise<AccessToken|{message: string, code: number}> {
-        let authorization =  Buffer.from(`${this.clientId}:${this.clientSecret}`).toString("base64");
-
         let response = await fetch("https://discord.com/api/v10/oauth2/token", {
             method: "POST",
             headers: {
@@ -32,10 +30,13 @@ export class AccessHandler {
                 redirect_uri: this.redirectUri,
                 scope: this.scopes.join(" ")
             })
-
         })
-
         return await response.json();
+    }
+
+    public async refreshToken(refreshToken: string): Promise<any> {
+
+
 
     }
 

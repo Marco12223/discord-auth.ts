@@ -2,12 +2,15 @@ import {AccessToken} from "./interfaces/user/accessToken";
 import {Endpoints} from "./enums/endpoints";
 import {User} from "./interfaces/user/user";
 import {Permissions} from "./enums/permissions/permissions";
+import {GuildData} from "./guild";
 
 export class UserData {
 
+    guildInstance: GuildData | undefined;
     public accessToken: AccessToken = <AccessToken>{};
     constructor(private _accessToken: AccessToken) {
         this.accessToken = _accessToken;
+        this.guildInstance = new GuildData(this.accessToken);
     }
 
     public getAccessToken(): AccessToken {
@@ -36,6 +39,10 @@ export class UserData {
 
     public hasPermission(permissions: number, permission: Permissions): boolean {
         return (permissions & permission) === permission;
+    }
+
+    public guild(): GuildData | undefined{
+        return this.guildInstance;
     }
 
 }

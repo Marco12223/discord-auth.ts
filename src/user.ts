@@ -29,10 +29,6 @@ export class UserData {
         return await this.sendRequest(Endpoints.USER_ENDPOINT, "GET");
     }
 
-    public async getGuilds(): Promise<any> {
-        return await this.sendRequest(Endpoints.GUILD_ENDPOINT, "GET");
-    }
-
     public async getConnections(): Promise<any> {
         return await this.sendRequest(Endpoints.CONNECTIONS_ENDPOINT, "GET");
     }

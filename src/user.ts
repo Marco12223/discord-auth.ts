@@ -1,7 +1,8 @@
 import {AccessToken} from "./interfaces/user/accessToken";
 import {Endpoints} from "./enums/endpoints";
+import {User} from "./interfaces/user/user";
 
-export class User {
+export class UserData {
 
     public accessToken: AccessToken = <AccessToken>{};
     constructor(private _accessToken: AccessToken) {
@@ -22,6 +23,10 @@ export class User {
             }
         })
         return await response.json();
+    }
+
+    public async getUser(): Promise<User> {
+        return await this.sendRequest(Endpoints.USER_ENDPOINT, "GET");
     }
 
 }

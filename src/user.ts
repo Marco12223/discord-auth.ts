@@ -1,6 +1,7 @@
 import {AccessToken} from "./interfaces/user/accessToken";
 import {Endpoints} from "./enums/endpoints";
 import {User} from "./interfaces/user/user";
+import {Permissions} from "./enums/permissions/permissions";
 
 export class UserData {
 
@@ -31,6 +32,10 @@ export class UserData {
 
     public async getConnections(): Promise<any> {
         return await this.sendRequest(Endpoints.CONNECTIONS_ENDPOINT, "GET");
+    }
+
+    public hasPermission(permissions: number, permission: Permissions): boolean {
+        return (permissions & permission) === permission;
     }
 
 }

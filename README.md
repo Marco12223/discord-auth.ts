@@ -126,8 +126,8 @@ app.get('/', (req, res) => {
 // Redirect URI for the OAuth2 flow (http://localhost:3000/auth)
 app.get('/auth', async (req, res) => {
     const code = req.query.code; // Get the authorization code from the request
-    const token = await oauth2.accessHandler().tokenExchange(code); // Exchange the authorization code for an access token
-    const userData = await oauth2.getUser(token); // Get the user's information from Discord
+    const accessToken = await oauth2.accessHandler().tokenExchange(code); // Exchange the authorization code for an access token
+    const userData = await oauth2.user(accessToken).getUser(); // Get the user's information from Discord
     res.send(userData.id); // Respond with the user's Discord ID
 });
 

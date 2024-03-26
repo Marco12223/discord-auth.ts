@@ -5,4 +5,5 @@ export enum Endpoints {
     REVOKE_ENDPOINT = "https://discord.com/api/oauth2/token/revoke",
     USER_ENDPOINT = "https://discord.com/api/v10/users/@me",
     GUILD_ENDPOINT = "https://discord.com/api/v10/users/@me/guilds",
+    CONNECTIONS_ENDPOINT = "https://discord.com/api/v10/users/@me/connections"
 }

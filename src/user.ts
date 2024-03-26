@@ -13,7 +13,7 @@ export class UserData {
         return this.accessToken;
     }
 
-    private async sendRequest(endpoint: Endpoints, method: string): Promise<any> {
+    private async sendRequest(endpoint: Endpoints|string, method: string): Promise<any> {
 
         let response = await fetch(endpoint, {
             method: method,
@@ -27,6 +27,14 @@ export class UserData {
 
     public async getUser(): Promise<User> {
         return await this.sendRequest(Endpoints.USER_ENDPOINT, "GET");
+    }
+
+    public async getGuilds(): Promise<any> {
+        return await this.sendRequest(Endpoints.GUILD_ENDPOINT, "GET");
+    }
+
+    public async getConnections(): Promise<any> {
+        return await this.sendRequest(Endpoints.CONNECTIONS_ENDPOINT, "GET");
     }
 
 }

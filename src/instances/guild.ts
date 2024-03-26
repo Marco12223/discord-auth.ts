@@ -27,11 +27,6 @@ export class GuildData {
         return await response.json();
     }
 
-    private async getUserData(): Promise<User> {
-        let userData = new UserData(this.accessToken);
-        return await userData.getUser();
-    }
-
     public async getGuilds(): Promise<Guild[]> {
         return await this.sendRequest(Endpoints.GUILD_ENDPOINT, "GET");
     }

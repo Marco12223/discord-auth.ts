@@ -1,6 +1,9 @@
 import {Scopes} from "./enums/scopes";
 import {Properties} from "./interfaces/properties";
 import {Endpoints} from "./enums/endpoints";
+import {UserData} from "./instances/user";
+import {AccessToken} from "./interfaces/user/accessToken";
+import {AccessHandler} from "./handlers/AccessHandler";
 
 export class DiscordAuth {
     public clientId: string = "";
@@ -25,6 +28,14 @@ export class DiscordAuth {
 
     public getAuthUrl(): string {
         return `${Endpoints.AUTHORIZE_ENDPOINT}?client_id=${this.clientId}&redirect_uri=${this.redirectUri}&response_type=code&scope=${this.scopes.join("+")}`;
+    }
+
+    public user(accessToken: AccessToken): UserData {
+        return new UserData(accessToken);
+    }
+
+    public accessHandler(): AccessHandler {
+        return new AccessHandler(this);
     }
 
 }

@@ -12,7 +12,7 @@ export class User {
         return this.accessToken;
     }
 
-    public async sendRequest(endpoint: Endpoints, method: string): Promise<any> {
+    private async sendRequest(endpoint: Endpoints, method: string): Promise<any> {
 
         let response = await fetch(endpoint, {
             method: method,

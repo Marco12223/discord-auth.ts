@@ -4,3 +4,4 @@ dist/
 package-lock.json
 .npmignore
 node_modules/
+playground/

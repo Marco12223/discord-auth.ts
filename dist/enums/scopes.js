@@ -1,0 +1,26 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Scopes = void 0;
+var Scopes;
+(function (Scopes) {
+    Scopes["IDENTIFY"] = "identify";
+    Scopes["EMAIL"] = "email";
+    Scopes["GUILDS"] = "guilds";
+    Scopes["GUILDS_JOIN"] = "guilds.join";
+    Scopes["GDM_JOIN"] = "gdm.join";
+    Scopes["MESSAGES_READ"] = "messages.read";
+    Scopes["RPC"] = "rpc";
+    Scopes["RPC_NOTIFICATIONS_READ"] = "rpc.notifications.read";
+    Scopes["RPC_VOICE_READ"] = "rpc.voice.read";
+    Scopes["RPC_VOICE_WRITE"] = "rpc.voice.write";
+    Scopes["RPC_ACTIVITIES_WRITE"] = "rpc.activities.write";
+    Scopes["BOT"] = "bot";
+    Scopes["WEBHOOK_INCOMING"] = "webhook.incoming";
+    Scopes["APPLICATIONS_BUILDS_UPLOAD"] = "applications.builds.upload";
+    Scopes["APPLICATIONS_BUILDS_READ"] = "applications.builds.read";
+    Scopes["APPLICATIONS_STORE_UPDATE"] = "applications.store.update";
+    Scopes["APPLICATIONS_ENTITLEMENTS"] = "applications.entitlements";
+    Scopes["ACTIVITIES_READ"] = "activities.read";
+    Scopes["ACTIVITIES_WRITE"] = "activities.write";
+    Scopes["RELATIONSHIPS_READ"] = "relationships.read";
+})(Scopes || (exports.Scopes = Scopes = {}));

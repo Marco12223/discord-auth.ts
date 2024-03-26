@@ -1,0 +1,25 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Services = void 0;
+var Services;
+(function (Services) {
+    Services["BattleNet"] = "battlenet";
+    Services["eBay"] = "ebay";
+    Services["EpicGames"] = "epicgames";
+    Services["Facebook"] = "facebook";
+    Services["GitHub"] = "github";
+    Services["Instagram"] = "instagram";
+    Services["LeagueOfLegends"] = "leagueoflegends";
+    Services["PayPal"] = "paypal";
+    Services["PlayStation"] = "playstation";
+    Services["Reddit"] = "reddit";
+    Services["RiotGames"] = "riotgames";
+    Services["Spotify"] = "spotify";
+    Services["Skype"] = "skype";
+    Services["Steam"] = "steam";
+    Services["TikTok"] = "tiktok";
+    Services["Twitch"] = "twitch";
+    Services["Twitter"] = "twitter";
+    Services["Xbox"] = "xbox";
+    Services["YouTube"] = "youtube";
+})(Services || (exports.Services = Services = {}));

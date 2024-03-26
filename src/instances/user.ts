@@ -1,7 +1,7 @@
-import {AccessToken} from "./interfaces/user/accessToken";
-import {Endpoints} from "./enums/endpoints";
-import {User} from "./interfaces/user/user";
-import {Permissions} from "./enums/permissions/permissions";
+import {AccessToken} from "../interfaces/user/accessToken";
+import {Endpoints} from "../enums/endpoints";
+import {User} from "../interfaces/user/user";
+import {Permissions} from "../enums/permissions/permissions";
 import {GuildData} from "./guild";
 
 export class UserData {

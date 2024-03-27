@@ -15,6 +15,10 @@
   "contributors": [
     "Marco H."
   ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/Marco12223"
+  },
   "author": "Marco H.",
   "license": "MIT",
   "devDependencies": {

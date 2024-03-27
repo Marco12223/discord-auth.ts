@@ -1,9 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.DiscordAuth = void 0;
+exports.DiscordAuth = exports.Scopes = void 0;
 const endpoints_1 = require("./enums/endpoints");
 const user_1 = require("./instances/user");
 const AccessHandler_1 = require("./handlers/AccessHandler");
+var scopes_1 = require("./enums/scopes");
+Object.defineProperty(exports, "Scopes", { enumerable: true, get: function () { return scopes_1.Scopes; } });
 class DiscordAuth {
     constructor(_clientId, _clientSecret, _redirectUri, _scopes, _properties) {
         this._clientId = _clientId;

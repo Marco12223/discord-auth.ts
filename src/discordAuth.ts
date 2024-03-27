@@ -5,6 +5,7 @@ import {UserData} from "./instances/user";
 import {AccessToken} from "./interfaces/user/accessToken";
 import {AccessHandler} from "./handlers/AccessHandler";
 
+export {Scopes} from "./enums/scopes";
 export class DiscordAuth {
     public clientId: string = "";
     public clientSecret: string = "";
@@ -39,4 +40,3 @@ export class DiscordAuth {
     }
 
 }
-export Scopes;

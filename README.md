@@ -40,10 +40,9 @@ to load the latest version from the repository.
 To use the package, you need to create a new instance of the `DiscordAuth` class and provide the necessary configuration options. Here's an example of how you can set up the authentication flow in your application:
 
 ```typescript
-import { DiscordAuth } from 'discord-auth.ts';
-import { IDENTIFY, EMAIL } from 'discord-auth.ts/src/enums/scopes';
+import { DiscordAuth, Scopes } from 'discord-auth.ts';
 
-const oauth2 = new DiscordAuth('CLIENT_ID', 'CLIENT_SECRET', 'REDIRECT_URI', [IDENTIFY, EMAIL]);
+const oauth2 = new DiscordAuth('CLIENT_ID', 'CLIENT_SECRET', 'REDIRECT_URI', [Scopes.IDENTIFY, Scopes.EMAIL]);
 ````
 The `DiscordAuth` class takes four parameters:
 - `CLIENT_ID`: Your Discord application's client ID.
@@ -75,10 +74,9 @@ This will return an object containing the access token, refresh token, and token
 To use the package in JavaScript, you can follow the same steps as in TypeScript, but without the type annotations. Here's an example of how you can set up the authentication flow in your application:
 
 ```javascript
-const { DiscordAuth } = require('discord-auth.ts/dist/discordAuth.js');
-const { IDENTIFY, EMAIL } = require('discord-auth.ts/dist/enums/scopes.js');
+const { DiscordAuth, Scopes } = require('discord-auth.ts/dist/discordAuth.js');
 
-const oauth2 = new DiscordAuth('CLIENT_ID', 'CLIENT_SECRET', 'REDIRECT_URI', [IDENTIFY, EMAIL]);
+const oauth2 = new DiscordAuth('CLIENT_ID', 'CLIENT_SECRET', 'REDIRECT_URI', [Scopes.IDENTIFY, Scopes.EMAIL]);
 ```
 
 The `DiscordAuth` class takes four parameters:
@@ -110,8 +108,7 @@ Here's a complete example of how you can set up the authentication flow in an Ex
 
 ```typescript
 import express from 'express';
-import { DiscordAuth } from 'discord-auth.ts';
-import { Scopes } from 'discord-auth.ts/src/enums/scopes';
+import { DiscordAuth, Scopes } from 'discord-auth.ts';
 const app = express(); // Create a new Express application
 const port = 3000; // Port to run the Express server on
 

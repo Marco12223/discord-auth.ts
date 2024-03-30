@@ -14,7 +14,7 @@
   ],
   "publishConfig": {
     "access": "public",
-    "registry": "https://npm.pkg.github.com/Marco12223"
+    "registry": "https://npm.pkg.github.com/@Marco12223"
   },
   "author": "Marco H.",
   "license": "MIT",
